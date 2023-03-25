@@ -58,7 +58,7 @@ const Constructions = () => {
   
   return (
     <>
-    <HeadingBlock heading="Constructionss" description="Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum"/>
+    <HeadingBlock heading="Constructions" description="Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum"/>
     <div className="w-full mt-14 gap-4 flex-wrap flex justify-center items-center">
       {constructionData.map((item, index) => {
         return (
