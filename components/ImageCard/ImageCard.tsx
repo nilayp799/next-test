@@ -1,7 +1,7 @@
 
 const ImageCard = (props: any) => {
   return (
-    <div className="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+    <div id={props.data.id} className="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
       <img className="h-40 object-cover rounded-xl" src={props.data.image} alt="" />
       <div className="p-2">
         <h2 className="font-bold text-lg mb-2 text-slate-400">
