@@ -19,7 +19,7 @@ const data = await fetch('https://next-test-nilayp799.vercel.app/api/services/ge
       'Content-Type':'application/json'
     }
   }).then(res=>res.json());
-  const ids = data.services.map((items,id)=>{
+  const ids = data.services.map((items:any,id:any)=>{
     return items["_id"];
   })
   const params = ids.map((sid:any)=>({
