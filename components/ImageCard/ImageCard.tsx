@@ -14,7 +14,6 @@ const ImageCard = (props: any) => {
       { props.data.isLink ? 
           <div className="m-2 p-1">
             <Link href={props.data.link+'/' + props.data.id} role='button' className="text-white bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Learn More</Link>
-          {/* <a role='button' href={props.data.link+'/' + props.data.id} className="text-white bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Learn More</a> */}
           </div>
          : <></>
       }

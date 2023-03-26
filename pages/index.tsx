@@ -5,8 +5,9 @@ const inter = Inter({ subsets: ["latin"] });
 import Constructions from "@/components/constructions/constructions";
 import Services from "@/components/Services/Services";
 import ContactForm from "@/components/contactForm/ContactForm";
+import Link from "next/link";
 
-export default function Home() {
+export default function Home(props:any) {
   return (
     <>
       <Head>
@@ -15,9 +16,28 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Constructions />
+      
+      <h3>go to <Link href='/admin'>admin</Link> for adding cards or any other resources</h3>
+      <Constructions data={props.constructions}/>
       <Services />
       <ContactForm />
+      <h3 className="text-center bg-red-500">most form validations are not implemented yet</h3>
     </>
   );
+}
+
+
+export async function getStaticProps(){
+  const data = await fetch('https://next-test-nilayp799.vercel.app/api/constructions/getConstructions',
+    {
+      method:"GET",
+      headers:{
+        'Content-Type':'application/json'
+      },
+    }).then(res=>{return res.json()})
+  return{
+    props:{
+      constructions:data.constructions,
+    }
+  }
 }

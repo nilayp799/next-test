@@ -30,7 +30,7 @@ const Services = () => {
 
   return (
     <>
-    <HeadingBlock heading="Services" description="Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum"/>
+    <HeadingBlock heading="Services" description="this is simple react component and we've used useeffect for fetching data and you can observe that it takes too much time"/>
     <div className="w-full mt-14 gap-4 flex-wrap flex justify-center items-center">
     {isLoading ? <>Data loading using useEffect()...</> : <></>}
       {servicesData.map((item, index) => {
