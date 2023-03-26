@@ -47,6 +47,7 @@ const ContactForm = () =>{
     <div className={styles.formboldMainWrapper}>
     form validations are not implemented
   <div className={styles.formboldFormWrapper}>
+    <h1>Contact Form</h1>
     
       <div className="formboldMb5">
         <label className={styles.formboldFormLabel} > Full Name </label>
