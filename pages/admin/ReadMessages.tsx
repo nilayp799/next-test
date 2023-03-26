@@ -30,7 +30,6 @@ export async function getStaticProps(){
     }
   }).then(res=>{return res.json()})
   .then(data=> {return data.messages})
-  
   return{
     props:{
       messages :data,
