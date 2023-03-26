@@ -6,6 +6,7 @@ import Hero from "@/components/hero/Hero";
 const inter = Inter({ subsets: ["latin"] });
 import Constructions from "@/components/constructions/constructions";
 import Services from "@/components/Services/Services";
+import ContactForm from "@/components/contactForm/ContactForm";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
       <Constructions />
       <Services />
+      <ContactForm />
     </>
   );
 }
