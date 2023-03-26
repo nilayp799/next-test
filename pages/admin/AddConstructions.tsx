@@ -1,9 +1,9 @@
 import { useRef } from "react";
 
 const AddConstructions = ()=>{
-  const headingRef = useRef();
-  const descriptionRef = useRef();
-  const imageRef = useRef();
+  const headingRef = useRef<HTMLInputElement>(null!);
+  const descriptionRef = useRef<HTMLInputElement>(null!);
+  const imageRef = useRef<HTMLInputElement>(null!);
   const submitConstructionHandler = async()=>{
     const res = await fetch('/api/constructions/addConstruction',
     {
