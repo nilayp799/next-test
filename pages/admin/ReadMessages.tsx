@@ -23,7 +23,7 @@ export default ReadMessages;
 
 export async function getStaticProps(){
   
-  const data = await fetch('http:localhost:3000/api/form/getContactMessages',{
+  const data = await fetch('https://next-test-nilayp799.vercel.app/api/form/getContactMessages',{
     method:'GET',
     headers:{
       'Content-Type' : 'application/json'
