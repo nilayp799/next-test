@@ -89,7 +89,7 @@ const Constructions =() => {
         console.log(item)
         return (
           <>
-            <ImageCard key={index} data = {{id:item["_id"],heading:item.heading,description:item.description,image:item.image}}/>
+            <ImageCard key={index} data = {{id:item["_id"],heading:item["heading"],description:item["description"],image:item["image"]}}/>
           </>
         );
       })}
