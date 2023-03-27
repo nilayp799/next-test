@@ -29,7 +29,6 @@ export async function getStaticProps(){
     }
   }).then(res=>{return res.json()})
   .then(data=> {return data.messages})
-  console.log(data)
   return{
     props:{
       messages :data,

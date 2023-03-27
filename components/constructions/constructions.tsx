@@ -4,7 +4,6 @@ import HeadingBlock from "../comman/HeadingBlock";
 import { useEffect,useState } from "react";
 
 const Constructions =(props:any) => {
-  console.log(props.data)
   // const [constructionsData, setconstructionsData] = useState([]);
   // const [isLoading, setisLoading] = useState(true);
   //  useEffect(() => {
