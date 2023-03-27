@@ -20,6 +20,7 @@ const BlogsHome = (props: any) => {
             <h2 className="font-bold text-lg mb-2 text-slate-400">
               {blog.title}
             </h2>
+            <h3 className="font-mono text-lg mb-2 text-orange-400" >published on {blog.date}</h3>
 
             <p className="text-sm text-gray-600">{blog.description}</p>
           </div>
