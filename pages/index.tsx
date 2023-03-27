@@ -21,6 +21,7 @@ export default function Home(props:any) {
       <Constructions data={props.constructions}/>
       <Services />
       <ContactForm />
+      <h1 className=" text-center"><Link href='/blogs'>Go to Blogs Page</Link></h1>
       <h3 className="text-center bg-red-500">most form validations are not implemented yet</h3>
     </>
   );
