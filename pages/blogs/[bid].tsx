@@ -1,4 +1,6 @@
+import Comments from "@/components/Comments/Comments";
 const Blog = (props:any) =>{
+  
   return(
     <>
     <h3 className=" text-center">this is blog page - developed using server props and api</h3>
@@ -11,8 +13,7 @@ const Blog = (props:any) =>{
       <p className=" italic text-sky-900 text-xl">
         {props.data.content}
       </p>
-
-      <h4 className=" text-red-400">comment section will be implemented soon.. stay tuned</h4>
+      <Comments data={props.commentsData} />
     </div>
     </>
   )
@@ -46,9 +47,34 @@ export async function getServerSideProps(context:any) {
     };
   });
 
+  // const commentsRes = await fetch(
+  //   "https://next-test-nilayp799.vercel.app/api/blogs/comments/getComments/?bid="+bid,
+  //   {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   }
+  // ).then((res) => res.json());
+
+  // const comments = commentsRes.comments.map((comment:any,index:any)=>{
+  //   return{
+  //     id:comment["_id"],
+  //     author: comment.author,
+  //     comment:comment.comment,
+  //     date:comment.date,
+  //     time:comment.time,
+  //   }
+      
+  // })
+
   return {
     props: {
       data: data[0],
+      commentsData:{
+        comments:{},
+        bid:bid,
+      }
     },
   };
 }
