@@ -47,32 +47,32 @@ export async function getServerSideProps(context:any) {
     };
   });
 
-  // const commentsRes = await fetch(
-  //   "https://next-test-nilayp799.vercel.app/api/blogs/comments/getComments/?bid="+bid,
-  //   {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   }
-  // ).then((res) => res.json());
+  const commentsRes = await fetch(
+    "https://next-test-nilayp799.vercel.app/api/blogs/comments/getComments/?bid="+bid,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  ).then((res) => res.json());
 
-  // const comments = commentsRes.comments.map((comment:any,index:any)=>{
-  //   return{
-  //     id:comment["_id"],
-  //     author: comment.author,
-  //     comment:comment.comment,
-  //     date:comment.date,
-  //     time:comment.time,
-  //   }
+  const comments = commentsRes.comments.map((comment:any,index:any)=>{
+    return{
+      id:comment["_id"],
+      author: comment.author,
+      comment:comment.comment,
+      date:comment.date,
+      time:comment.time,
+    }
       
-  // })
+  })
 
   return {
     props: {
       data: data[0],
       commentsData:{
-        comments:{},
+        comments:comments,
         bid:bid,
       }
     },
