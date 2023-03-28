@@ -2,6 +2,7 @@ const Blog = (props:any) =>{
   return(
     <>
     <h3 className=" text-center">this is blog page - developed using server props and api</h3>
+    test
     <div className=" container content-center">
       <h1>{props.data.title}</h1>
       <h3>by {props.data.author}</h3>
